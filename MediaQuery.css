@@ -1,0 +1,88 @@
+@media screen and (max-width:700px) {
+    .HomeSectionOne{
+        flex-direction: column;
+        height: fit-content;
+    }.HomeSectionOne .LeftSide{
+        width: 100%;
+        height: 600px;
+    }.HomeSectionOne .RightSide{
+        width: 100%;
+        min-height: 600px;
+    }.HomeSectionOne .RightSide .HomeSection2In1{
+        width: 100vw;
+        position: relative;
+        margin-left: -10vw;
+        margin-top: 20px;
+        right: 0;
+        flex-direction: column;
+        height: fit-content;
+    }.HomeSectionOne .RightSide .HomeSection2In1 .HomeSection2In1Part{
+        margin: 10px;
+    }.HomeSectionOne .RightSide .HomeSection2In1 .HomeSection2In1Line{
+        display: none;
+    }.HomeSectionOne .RightSide .RightSideBg .Bg3{
+        height: 600px;
+    }.HomeSectionThird{
+        flex-direction: column;
+    }.HomeSectionThirdLeft{
+        width: 100%;
+    }.HomeSectionThirdRight{
+        width: 100%;
+        padding-bottom: 50px;
+    }.HomeSectionThirdRighthHead{
+        margin-top: 10px;
+    }.HomeSectionFifth{
+        flex-direction: column-reverse;
+    }.HomeSectionFifth .Left{
+        width: 100%;
+    }.HomeSectionFifth .Right{
+        width: 100%;
+    }.HomeSectionSecondListItem{
+        width: 40%;
+        margin: 30px;
+    }.MainHeader .MainNavButton{
+        display: block;
+        cursor: pointer;
+    }.MainHeader .MainNavButton div{
+        width: 40px;
+        height: 5px;
+        background: #000;
+        transition: .5s;
+        border-radius: 5px;
+    }.MainHeader .MainNavButton div:first-child{
+        margin-bottom: 10px;
+        animation: tmp 3s linear;
+    }.MainHeader .MainNavButton.active div:first-child{
+        margin-bottom: 0;
+        margin-top: 5px;
+        transform: rotate(45deg);
+    }.MainHeader .MainNavButton.active div:last-child{
+        margin-top: -5px;
+        transform: rotate(-45deg);
+    }.ListComputer:not(.active){
+        display: none;
+    }.ListComputer.active{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 99;
+        background: rgb(255, 255, 255);
+        top: 90px;
+        left: 0;
+        font-size: 150%;
+        justify-content: center;
+        align-items: center;
+        animation: NavList .3s linear;
+    }.ListComputer.active p{
+        margin: 30px 0;
+        font-weight: 600;
+    }@keyframes NavList{
+        from{
+            opacity: 0;
+        }to{
+            opacity: 1;
+        }
+    }
+}

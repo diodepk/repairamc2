@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=IBM+Plex+Sans&family=Montserrat&family=Noto+Sans&family=Odibee+Sans&family=Playball&family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    color: #000;
+}
+button{
+    cursor: pointer;
+    transition: .3s;
+}
+/* body{
+    display: flex;
+    justify-content: center;
+} */
+.root{
+    width: 100vw;
+    max-width: 1200px;
+}
+.MainHeader{
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.436);
+    justify-content: space-between;
+    padding: 30px 5vw;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+.MainHeader .logo{
+    font-size: 150%;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+.MainHeader .ListComputer{
+    display: flex;
+}
+.MainHeader .ListComputer a{
+    font-size: 110%;
+    margin: 0 10px;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+.MainHeader .ListComputer a:not(.active):hover{
+    margin: 0 15px;
+    letter-spacing: 1px;
+}
+.MainHeader .ListComputer a.active{
+    color: blue;
+    border-bottom-color: blue;
+}
+.MainHeader .MainNavButton{
+    display: none;
+}
+.HomeSectionOne{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 700px;
+}
+.HomeSectionOne .LeftSide{
+    width: 40%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.HomeSectionOne .LeftSide .LeftSideBg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+}
+.HomeSectionOne .LeftSide .LeftSideBg .Bg1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.HomeSectionOne .LeftSide .LeftSideBg .Bg1{
+    --s: 100px; /* control the size */
+    --c1: #C3CCAF;
+    --c2: #0b0b45;
+    filter: blur(10px);
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: var(--_s) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
+    --_p: var(--_s) conic-gradient(at 20% 20%,#0000 75%,var(--c2) 0);
+    background:
+      calc( .9*var(--s)) calc( .9*var(--s))/var(--_p),
+      calc(-.1*var(--s)) calc(-.1*var(--s))/var(--_p),
+      calc( .7*var(--s)) calc( .7*var(--s))/var(--_g),
+      calc(-.3*var(--s)) calc(-.3*var(--s))/var(--_g),
+      conic-gradient(from 90deg at 20% 20%,var(--c2) 25%,var(--c1) 0) 
+       0 0/var(--s) var(--s);
+    animation: m 3s infinite;
+  }
+  @keyframes m {
+    0% {
+     background-position: 
+      calc( .9*var(--s)) calc( .9*var(--s)),
+      calc(-.1*var(--s)) calc(-.1*var(--s)),
+      calc( .7*var(--s)) calc( .7*var(--s)),
+      calc(-.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    25% {
+     background-position: 
+      calc(1.9*var(--s)) calc( .9*var(--s)),
+      calc(-1.1*var(--s)) calc(-.1*var(--s)),
+      calc(1.7*var(--s)) calc( .7*var(--s)),
+      calc(-1.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    50% {
+     background-position: 
+      calc(1.9*var(--s)) calc(-.1*var(--s)),
+      calc(-1.1*var(--s)) calc( .9*var(--s)),
+      calc(1.7*var(--s)) calc(-.3*var(--s)),
+      calc(-1.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    75% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-.1*var(--s)),
+      calc(-2.1*var(--s)) calc( .9*var(--s)),
+      calc(2.7*var(--s)) calc(-.3*var(--s)),
+      calc(-2.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    100% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-1.1*var(--s)),
+      calc(-2.1*var(--s)) calc(1.9*var(--s)),
+      calc(2.7*var(--s)) calc(-1.3*var(--s)),
+      calc(-2.3*var(--s)) calc(1.7*var(--s)),0 0
+    }
+  }
+.HomeSectionOne .LeftSide .LeftSideImg{
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    height: 70%;
+    box-shadow: 0 0 20px #999;
+    border-radius: 20px;
+    background: url(Images/Asset\ 5.png) no-repeat center;
+    background-size: cover; 
+}
+.HomeSectionOne .RightSide{
+    position: relative;
+    width: 60%;
+    background: #0b0b45;
+    padding: 0 10vw;
+}
+.HomeSectionOne .RightSide .RightSideHeading{
+    font-size: 250%;
+    color: #fff;
+    margin: 25% 0 40px 0;
+}
+.HomeSectionOne .RightSide .RightSideDescription{
+    color: #fff;
+}
+.HomeSectionOne .RightSide .RightSideButton{
+    border: 2px solid white;
+    background: none;
+    padding: 10px 15px;
+    color: #fff;
+    margin-top: 40px;
+}
+.HomeSectionOne .RightSide .RightSideButton:hover{
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+}
+.HomeSectionOne .RightSide .RightSideBg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.HomeSectionOne .RightSide .RightSideBg .Bg1{
+    position: absolute;
+    width: 20vw;
+    height: 10vw;
+    background: rgba(255, 255, 255, 0.192);
+    right: 0;
+    bottom: 0;
+}
+.HomeSectionOne .RightSide .RightSideBg .Bg2{
+    position: absolute;
+    width: 30vw;
+    height: 20vw;
+    background: rgba(255, 255, 255, 0.192);
+    right: 0;
+    bottom: 0;
+}
+.HomeSectionOne .RightSide .RightSideBg .Bg3{
+    position: absolute;
+    width: 10vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.192);
+    right: 0;
+    bottom: 0;
+}
+.HomeSectionOne .RightSide .HomeSection2In1{
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    width: 70vw;
+    height: 50px;
+    right: 15vw;
+    box-shadow: 0 0 20px rgba(0, 4, 83, 0.431);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.HomeSectionOne .RightSide .HomeSection2In1 .HomeSection2In1Part{
+    display: flex;
+    align-items: center;
+}
+.HomeSectionOne .RightSide .HomeSection2In1 .HomeSection2In1Part i{
+    margin-right: 10px;
+    color: rgb(130, 130, 0);
+    font-size: 120%;
+}
+.HomeSectionOne .RightSide .HomeSection2In1 .HomeSection2In1Line{
+    width: 1px;
+    height: 20px;
+    background: #0b0b45;
+}
+.HomeSectionSecond{
+    background: rgba(135, 207, 235, 0.367);
+}
+.HomeSectionSecondHead{
+    padding: 40px 0;
+    text-align: center;
+}
+.HomeSectionSecondHeadTop{
+    margin-bottom: 20px;
+    color: rgb(99, 99, 5);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.HomeSectionSecondList{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.HomeSectionSecondListItem{
+    max-width: 250px;
+    min-width: 200px;
+    margin: 20px 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.HomeSectionSecondListItemImg{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.HomeSectionSecondListItemDescription{
+    font-size: 90%;
+}
+.HomeSectionSecondListItemImg i{
+    font-size: 25px;
+    color: rgb(99, 99, 5);
+}
+.HomeSectionSecondListItemHeading{
+    font-size: 120%;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.HomeSectionThird{
+    display: flex;
+}
+.HomeSectionThirdLeft{
+    width: 50%;
+}
+.HomeSectionThirdRight{
+    width: 50%;
+}
+.HomeSectionThirdLeftHeadMain{
+    padding: 5px 10px;
+    background: yellow;
+    width: fit-content;
+    font-size: 90%;
+    border-radius: 10px;
+    margin: 20px 20%;
+}
+.HomeSectionThirdLeftHead,.HomeSectionFourthLeftHead{
+    font-size: 150%;
+    font-weight: 600;
+    margin: 20px 20%;
+    text-transform: capitalize;
+}
+.HomeSectionThirdLeftImg{
+    margin: 20px 20%;
+    width: 70%;
+    height: 400px;
+    background: url(Images/Asset\ 3.png);
+    background-size: cover;
+}
+.HomeSectionThirdRighthHead{
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 80%;
+}
+.HomeSectionThirdRightQAList{
+    margin-left: 10%;
+    margin-top: 10px;
+}
+.HomeSectionThirdRightQA{
+    width: 85%;
+    height: fit-content;
+    margin: 10px 0;
+    border: 1px solid #0b0b45;
+    height: 39px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.HomeSectionThirdRightQA.active{
+    height: fit-content;
+}
+.HomeSectionThirdRightQAHead{
+    padding: 5px 10px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    color: #fff;
+    cursor: pointer;
+}
+.HomeSectionThirdRightQA.active .HomeSectionThirdRightQAHead{
+    background: #0b0b45;
+}
+.HomeSectionThirdRightQA.active .HomeSectionThirdRightQAHead i,
+.HomeSectionThirdRightQA.active .HomeSectionThirdRightQAHead p{
+    color: #fff;
+}
+.HomeSectionThirdRightQADesc{
+    padding: 5px 10px;
+    font-size: 90%;
+}
+.HomeSectionThirdRightBtn{
+    border: 2px solid #0b0b45;
+    margin-left: 10%;
+    margin-top: 20px;
+    padding: 7px 15px;
+    background: none;
+    font-size: 100%;
+}
+.HomeSectionThirdRightBtn:hover{
+    color: #fff;
+    background: #0b0b45;
+}
+.HomeSectionFourth{
+    background: rgba(135, 207, 235, 0.367);
+}
+.HomeSectionFourthLeftDesc{
+    margin: 10px 20%;
+    font-size: 95%;
+}
+.HomeSectionFourthLeftBtn{
+    margin: 10px 20%;
+}
+.HomeSectionFourthRightImg{
+    background: url(Images/Asset\ 1.png) center;
+    background-size: cover;
+}
+.HomeSectionFifth{
+    display: flex;
+}
+.HomeSectionFifth .Left{
+    width: 30%;
+    background: rgb(58, 0, 128);
+    color: #fff;
+    padding-left: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.HomeSectionFifth .Left iframe{
+    margin-top: 50px;
+    height: 300px;
+    width: 90%;
+    border: none;
+}
+.HomeSectionFifth .Left .MH{
+    color: #fff;
+    font-size: 140%;
+    margin: 10px 0;
+    font-weight: 600;
+    margin-top: 50px;
+}
+.HomeSectionFifth .Left .Md,
+.HomeSectionFifth .Left .List .Item .H i,
+.HomeSectionFifth .Left .List .Item .H p{
+    color: #fff;
+}
+.HomeSectionFifth .Left .List .Item .H{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.HomeSectionFifth .Left .List .Item .H i{
+    margin-right: 10px;
+}
+.HomeSectionFifth .Left .List .Item .Part p,
+.HomeSectionFifth .Left .List .Item .Part a{
+    margin-left: 20px;
+    color: #fff;
+}
+.HomeSectionFifth .Left .List .Item .Part p:first-child{
+    margin-bottom: 10px;
+}
+.HomeSectionFifth .Left .btn{
+    margin: 20px 10%;
+    width: 80%;
+    height: 40px;
+    border: 2px solid #fff;
+    background: none;
+    margin: 30px 5%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+}
+.HomeSectionFifth .Left .btn:hover{
+    background: #fff;
+}
+.HomeSectionFifth .Left .btn:hover i,
+.HomeSectionFifth .Left .btn:hover p{
+    color: #0b0b45;
+}
+.HomeSectionFifth .Left .btn i{
+    margin-right: 10px;
+}
+.HomeSectionFifth .Left .btn i,
+.HomeSectionFifth .Left .btn p{
+    color: #fff;
+}
+.HomeSectionFifth .Right{
+    width: 70%;
+    padding: 2.5% 10%;
+}
+.HomeSectionFifth .Right .RMH{
+    font-size: 150%;
+    font-weight: 600;
+}
+.HomeSectionFifth .Right .RMD{
+    margin: 10px 0 20px 0;
+}
+.HomeSectionFifth .Right .RMD a{
+    color: blue;
+}
+.HomeSectionFifth .Right form{
+    display: flex;
+    flex-direction: column;
+}
+.HomeSectionFifth .Right form label{
+    font-weight: 600;
+    margin: 5px 0;
+}
+.HomeSectionFifth .Right form input{
+    height: 40px;
+    width: 100%;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 100%;
+}
+.HomeSectionFifth .Right form textarea{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    font-size: 100%;
+}
+.HomeSectionFifth .Right .SerL{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.HomeSectionFifth .Right .SerL .Ser{
+    display: flex;
+    margin: 10px ;
+    min-width: 120px;
+    align-items: center;
+}
+.HomeSectionFifth .Right .SerL .Ser input{
+    width: 15px;
+    height: 15px;
+    margin: 5px 10px 0 0;
+}
+.HomeSectionFifth .Right .btn{
+    width: 90%;
+    height: 40px;
+    border: 2px solid #0b0b45;
+    background: none;
+    margin: 30px 5%;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.HomeSectionFifth .Right .btn:hover{
+    background: #0b0b45;
+    color: #fff;
+}
+.HomeFooter{
+    height: 40px;
+    display: grid;
+    place-items: center;
+    padding: 0 30px;
+}
+
+
+
